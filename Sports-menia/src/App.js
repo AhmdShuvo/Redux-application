@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Header from './Components/Header/Header';
@@ -13,8 +13,21 @@ import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import AuthProvider from './Contexts/AuthProvider';
 import Events from './Components/Events/Events';
+import axios from 'axios';
+import { SetProduct } from './app/Actions/ProductActions';
 
 function App() {
+  const dispatch=useDispatch()
+
+  const fetchData= async ()=>{
+
+     const response=await axios.get('http://localhost:9000/matches').catch(err=>console.log(err))
+    dispatch(SetProduct(response.data));
+  }
+  
+       useEffect(()=>{
+        fetchData()
+       },[])
 
   
   return (

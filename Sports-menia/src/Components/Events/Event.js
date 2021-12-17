@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Event = ({product}) => {
-    const {strSport,strSportThumb ,strSportDescription}=product;
-    console.log(product);
+    const {strSport,strSportThumb ,strSportDescription,_id}=product;
     return (
         <Col>
         <Card>
@@ -15,7 +15,7 @@ const Event = ({product}) => {
              {strSportDescription.slice(0,500)}
             </Card.Text>
           </Card.Body>
-           <Button>Add to Favorites</Button>
+           <Link to ={`/sports/${_id}`}><Button>Add to Favorites</Button></Link>
         </Card>
       </Col>
     );

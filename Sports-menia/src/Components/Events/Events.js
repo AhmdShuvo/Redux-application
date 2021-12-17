@@ -7,17 +7,7 @@ import Event from "./Event";
 import { Container, Row } from "react-bootstrap";
 
 const Events = () => {
-    const dispatch=useDispatch()
-
-    const fetchData= async ()=>{
-
-       const response=await axios.get('http://localhost:9000/matches').catch(err=>console.log(err))
-      dispatch(SetProduct(response.data));
-    }
-    
-         useEffect(()=>{
-          fetchData()
-         },[])
+   
         
          const products=useSelector((state)=>state.allProducts.products)
          if(products.lenght===0){

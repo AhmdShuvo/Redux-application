@@ -1,13 +1,36 @@
 import React, { useEffect } from 'react';
+import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Trending from './Trending';
 
 const Home = () => {
-    useEffect(()=>{
-        fetch('https://www.thesportsdb.com/api/v1/json/2/eventsseason.php?id=4328&s=2014-2015').then(res=>res.json()).then(data=>console.log("data")).catch(error=>console.log(error))
-     },[])
+   
     return (
-        <div>
-            <h1>Home Page</h1>
+        <>
+        <div className="mb-5" style={{
+            position: "relative",
+            textAlign: "center",
+            color:" white"
+          }}>
+            <img src="./images/banner.jpg" alt="Banner" width="100%" height="400px"></img>
+            <div  className=""><h1  style={{
+  position: "absolute",
+  bottom: "200px",
+  right:" 460px",
+  fontSize:'48px' }}>Sport mania
+  <p> populer Sports website</p>
+  </h1>
+  
+  </div>
+
         </div>
+
+        <Container>
+            <h1>Trending Sports </h1>
+            <Trending></Trending>
+            <center><Link to="/events"> <button>See More</button> </Link></center>
+        </Container>
+        </>
     );
 };
 

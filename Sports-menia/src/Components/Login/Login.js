@@ -18,13 +18,13 @@ const Login = () => {
 
  const location=useLocation()
  const history=useNavigate()
- const url=location.state?.from.location.pathname||"/home"
+ const url=location.state?.from.location.pathname||"/"
 
 
  const handleGoogle=()=>{
    GoogleLogin().then(result=>{
     saveGoogleUsertoDb(result.user.email,result.user.displayName)
-    history.replace(url)
+    history(url)
    });
  }
     
@@ -44,7 +44,7 @@ setData(newLogindata)
             // Signed in 
             
             const user = userCredential.user;
-            history.replace(url)
+            history(url)
             // ...
           })
           .catch((error) => {

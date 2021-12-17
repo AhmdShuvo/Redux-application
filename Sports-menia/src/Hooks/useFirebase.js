@@ -116,7 +116,7 @@ const saveUsertoDb=(email,displayName)=>{
 
   const user={email,displayName};
 
-  fetch('https://enigmatic-escarpment-30976.herokuapp.com/users',{
+  fetch('http://localhost:9000/users',{
     method:'POST',
     headers:{ "content-type": 'application/json'},
            body:JSON.stringify(user)
@@ -127,7 +127,7 @@ const saveGoogleUsertoDb=(email,displayName)=>{
 
   const user={email,displayName};
 
-  fetch('https://enigmatic-escarpment-30976.herokuapp.com/users',{
+  fetch('http://localhost:9000/users',{
     method:'POST',
     headers:{ "content-type": 'application/json'},
            body:JSON.stringify(user)
