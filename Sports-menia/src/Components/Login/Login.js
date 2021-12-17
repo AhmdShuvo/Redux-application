@@ -18,8 +18,8 @@ const Login = () => {
 
  const location=useLocation()
  const history=useNavigate()
- const url=location.state?.from.location||"/"
- console.log(url);
+ const url=location.state?.from.pathname||"/"
+ console.log(location.state?.from.pathname);
 
 
  const handleGoogle=()=>{
