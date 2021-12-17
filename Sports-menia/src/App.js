@@ -18,6 +18,8 @@ import { SetProduct } from './app/Actions/ProductActions';
 import Myorders from './Components/MyOrder/Myorders';
 import Details from './Components/Detaills/Details';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import AddNew from './Components/AddNew/AddNew';
+import AddReview from './Components/AddReview/AddReview';
 
 function App() {
   const dispatch=useDispatch()
@@ -39,6 +41,8 @@ function App() {
     <Header></Header>
    <Routes>
      <Route  path="/" element={<Home />} />
+     <Route  path="/addnew" element={<AddNew />} />
+     <Route  path="/ratings" element={<AddReview />} />
      <Route path="/events" element={<Events />} />
      <Route path="/about" element={<About />} />
      <Route path="/login" element={<Login />} />

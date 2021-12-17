@@ -7,7 +7,9 @@ const Event = ({product}) => {
     const {strSport,strSportThumb ,strSportDescription,_id}=product;
     return (
         <Col>
-        <Card>
+        <Card  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <Card.Img variant="top" src={`${strSportThumb}`}/>
           <Card.Body>
             <center><Card.Title className="text-info">{strSport}</Card.Title></center>

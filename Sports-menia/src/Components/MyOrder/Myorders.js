@@ -12,7 +12,7 @@ const Myorders = () => {
       useEffect(()=>{
 
 
-      fetch(`http://localhost:9000/order/${email}`).then(res=>res.json()).then(data=>setOrders(data))
+      fetch(`https://radiant-sands-17727.herokuapp.com/order/${email}`).then(res=>res.json()).then(data=>setOrders(data))
 
       },[email])
 

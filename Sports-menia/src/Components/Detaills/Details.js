@@ -55,7 +55,7 @@ const Details = () => {
         userData.status="pending"
                   
  //   POST REQUEST //
-    fetch(`http://localhost:9000/orders`,{
+    fetch(`https://radiant-sands-17727.herokuapp.com/orders`,{
        method:'POST',
        headers:{ "content-type": 'application/json'},
               body:JSON.stringify(userData)

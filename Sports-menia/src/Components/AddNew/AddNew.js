@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Container} from 'react-bootstrap';
 
-const AddNewCar = () => {
+const AddNew = () => {
     const element = <FontAwesomeIcon icon={faUpload} />
 
    const [CarData,setData]=useState({})
@@ -20,7 +20,7 @@ const AddNewCar = () => {
     const handleUpload=e=>{
 
                 const data=CarData
-              fetch("https://enigmatic-escarpment-30976.herokuapp.com/cars",{
+              fetch("https://radiant-sands-17727.herokuapp.com/matches",{
         
              method:"POST",headers:{"content-type":'application/json'},
              body:JSON.stringify(data)
@@ -58,4 +58,4 @@ const AddNewCar = () => {
     );
 };
 
-export default AddNewCar;
+export default AddNew;

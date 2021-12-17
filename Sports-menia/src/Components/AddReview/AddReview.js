@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form,Button } from 'react-bootstrap';
-import useAuth from '../../../Hooks/useAuth';
+import useAuth from '../../Hooks/useAuth';
+
 
 const AddReview = () => {
 
@@ -23,7 +24,7 @@ const AddReview = () => {
             const ratingInfo=ratingData;
             ratingInfo.users=userdata;
 
-            fetch('https://enigmatic-escarpment-30976.herokuapp.com/reviews',{
+            fetch('https://radiant-sands-17727.herokuapp.com/reviews',{
                 method:'POST',
                 headers:{ "content-type": 'application/json'},
                        body:JSON.stringify(ratingInfo)
