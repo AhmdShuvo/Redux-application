@@ -28,7 +28,6 @@ const Home = () => {
         <Container>
             <h1>Trending Sports </h1>
             <Trending></Trending>
-            <center><Link to="/events"> <button>See More</button> </Link></center>
         </Container>
         </>
     );

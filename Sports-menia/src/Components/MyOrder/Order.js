@@ -10,7 +10,7 @@ const Order = ({order}) => {
      const confirmation=  window.confirm(`Are You sure want to delete ${order.purchase.name} from You order ?`)
 
        if( confirmation){
-        fetch(`https://enigmatic-escarpment-30976.herokuapp.com/order/${order._id}`,{
+        fetch(`http://localhost:9000/order/${order._id}`,{
             
             method:'DELETE',
             headers: { "content-type" :'application/json'}
@@ -23,20 +23,18 @@ const Order = ({order}) => {
                   
     }
 
-         const {name,cost,picture,about}= order.purchase
+    const {strSport,strSportThumb ,strSportDescription,_id}= order.purchase
     return (
                     
         <Container>          
         <Card className="shadow-lg p-3 mb-5 bg-white rounded">
-        <Card.Img variant="top" src={picture}/>
+        <Card.Img variant="top" src={strSportThumb}/>
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Title> M.R.P : {cost}</Card.Title>
+          <Card.Title>{strSport}</Card.Title>
           <Card.Text>
-            {about}
+            {strSportDescription}
           </Card.Text>
           <div className="border border-info p-3 ">
-            <h4> status : {order.status}</h4>
           </div>
         </Card.Body>
          <Button onClick={handleDelete} className="btn-danger p-2 fs-3">Delete order</Button>

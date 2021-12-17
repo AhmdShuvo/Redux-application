@@ -15,6 +15,9 @@ import AuthProvider from './Contexts/AuthProvider';
 import Events from './Components/Events/Events';
 import axios from 'axios';
 import { SetProduct } from './app/Actions/ProductActions';
+import Myorders from './Components/MyOrder/Myorders';
+import Details from './Components/Detaills/Details';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   const dispatch=useDispatch()
@@ -40,6 +43,10 @@ function App() {
      <Route path="/about" element={<About />} />
      <Route path="/login" element={<Login />} />
      <Route path="/signup" element={<SignUp />} />
+     <Route path="/order/:email" element={<Myorders />} />
+     <Route path="/sports/:id" element={<PrivateRoute>
+              <Details/>
+            </PrivateRoute>}></Route>
    </Routes>
    <Footer></Footer>
    </BrowserRouter>

@@ -12,7 +12,7 @@ const Myorders = () => {
       useEffect(()=>{
 
 
-      fetch(`https://enigmatic-escarpment-30976.herokuapp.com/order/${email}`).then(res=>res.json()).then(data=>setOrders(data))
+      fetch(`http://localhost:9000/order/${email}`).then(res=>res.json()).then(data=>setOrders(data))
 
       },[email])
 
@@ -28,7 +28,7 @@ const Myorders = () => {
         
         <Container className="my-5">
 
-             <h1>My Orders </h1>
+             <h1>My Orders {orders.length} </h1>
             <Row xs={1} md={2} className="g-4">
            {
                orders.map(order=><Order

@@ -8,9 +8,9 @@ export const  SetProduct=(product)=>{
 };
 
 
-export const  SelectedProduct=(product)=>{
+export  const SELECTED_PRODUCT=(product)=>{
     return {
-        type:ActionType.SelectedProduct,
+        type:ActionType.SELECTED_PRODUCT,
         payload:product
     };
 };

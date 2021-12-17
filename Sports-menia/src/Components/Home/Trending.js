@@ -18,7 +18,7 @@ const Trending = () => {
             }
             </Row>
 
-           
+            <center className="my-5"><Link to="/events"> <button className="btn-warning p-2 boorder rouded-3 container-fluid text-light ">See More</button> </Link></center>
         </div>
     );
 };
