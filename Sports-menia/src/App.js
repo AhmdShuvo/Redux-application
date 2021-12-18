@@ -26,7 +26,7 @@ function App() {
 
   const fetchData= async ()=>{
 
-     const response=await axios.get('http://localhost:9000/matches').catch(err=>console.log(err))
+     const response=await axios.get('https://radiant-sands-17727.herokuapp.com/matches').catch(err=>console.log(err))
     dispatch(SetProduct(response.data));
   }
   

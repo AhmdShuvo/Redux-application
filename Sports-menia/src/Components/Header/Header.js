@@ -16,8 +16,8 @@ const Header = () => {
       <NavLink className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to="/"> Home</NavLink>
       {user.email &&<NavLink  className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to={`order/${user.email}`}>My Favorites</NavLink>}
       <NavLink className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to="/events">Events</NavLink>
-      <NavLink className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to="/addnew">Add sport</NavLink>
-      <NavLink className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to="/ratings">rate us</NavLink>
+      {/* <NavLink className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to="/addnew">Add sport</NavLink> */}
+      {/* <NavLink className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to="/ratings">rate us</NavLink> */}
       {user.email?<NavLink onClick={LogOUt} className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to="/Login"> Logout</NavLink>:<NavLink className="navbar-brand text-light border border-secondary p-2 rounded-3 m-2 " to="/Login">Login</NavLink>}
       
     
