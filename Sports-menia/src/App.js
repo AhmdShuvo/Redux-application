@@ -20,6 +20,7 @@ import Details from './Components/Detaills/Details';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AddNew from './Components/AddNew/AddNew';
 import AddReview from './Components/AddReview/AddReview';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   const dispatch=useDispatch()
@@ -40,7 +41,7 @@ function App() {
     <BrowserRouter>
     <Header></Header>
    <Routes>
-     <Route  path="/" element={<Home />} />
+     <Route   path="/" element={<Home />} />
      <Route  path="/addnew" element={<AddNew />} />
      <Route  path="/ratings" element={<AddReview />} />
      <Route path="/events" element={<Events />} />
@@ -51,6 +52,7 @@ function App() {
      <Route path="/sports/:id" element={<PrivateRoute>
               <Details/>
             </PrivateRoute>}></Route>
+            <Route path='*' element={<NotFound />} />
    </Routes>
    <Footer></Footer>
    </BrowserRouter>
