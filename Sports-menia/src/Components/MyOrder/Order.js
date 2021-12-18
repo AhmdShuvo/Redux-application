@@ -10,7 +10,7 @@ const Order = ({order}) => {
      const confirmation=  window.confirm(`Are You sure want to delete ${order.purchase.name} from You order ?`)
 
        if( confirmation){
-        fetch(`http://localhost:9000/order/${order._id}`,{
+        fetch(`https://radiant-sands-17727.herokuapp.com/order/${order._id}`,{
             
             method:'DELETE',
             headers: { "content-type" :'application/json'}

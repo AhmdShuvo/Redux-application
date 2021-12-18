@@ -37,7 +37,7 @@ const Details = () => {
     const dispatch=useDispatch()
     const FetchData=async()=>{
 
-    const response= await axios.get(`http://localhost:9000/sport/${id}`).catch(err=>console.log(err))
+    const response= await axios.get(`https://radiant-sands-17727.herokuapp.com/sport/${id}`).catch(err=>console.log(err))
     dispatch(SELECTED_PRODUCT(response.data))
     console.log(product);
     };
